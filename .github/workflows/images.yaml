@@ -40,26 +40,26 @@ jobs:
             tag: ${{ github.sha }}
             release-tag: latest
 
-          - image: executor-debug
-            target: kaniko-debug
-            platforms: linux/amd64,linux/arm64,linux/s390x
-            image-name: gcr.io/kaniko-project/executor
-            tag: ${{ github.sha }}-debug
-            release-tag: debug
+          #- image: executor-debug
+          #  target: kaniko-debug
+          #  platforms: linux/amd64,linux/arm64,linux/s390x
+          #  image-name: gcr.io/kaniko-project/executor
+          #  tag: ${{ github.sha }}-debug
+          #  release-tag: debug
 
-          - image: executor-slim
-            target: kaniko-slim
-            platforms: linux/amd64,linux/arm64,linux/s390x,linux/ppc64le
-            image-name: gcr.io/kaniko-project/executor
-            tag: ${{ github.sha }}-slim
-            release-tag: slim
+          #- image: executor-slim
+          #  target: kaniko-slim
+          #  platforms: linux/amd64,linux/arm64,linux/s390x,linux/ppc64le
+          #  image-name: gcr.io/kaniko-project/executor
+          #  tag: ${{ github.sha }}-slim
+          #  release-tag: slim
 
-          - image: warmer
-            target: kaniko-warmer
-            platforms: linux/amd64,linux/arm64,linux/s390x,linux/ppc64le
-            image-name: gcr.io/kaniko-project/warmer
-            tag: ${{ github.sha }}
-            release-tag: latest
+          #- image: warmer
+          #  target: kaniko-warmer
+          #  platforms: linux/amd64,linux/arm64,linux/s390x,linux/ppc64le
+          #  image-name: gcr.io/kaniko-project/warmer
+          #  tag: ${{ github.sha }}
+          #  release-tag: latest
 
     steps:
       - name: Harden Runner
