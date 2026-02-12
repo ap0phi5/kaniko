@@ -28,15 +28,15 @@ jobs:
       matrix:
         image:
           - executor
-          - executor-debug
-          - executor-slim
-          - warmer
+            # - executor-debug
+            # - executor-slim
+            # - warmer
 
         include:
           - image: executor
             target: kaniko-executor
-            platforms: linux/amd64,linux/arm64,linux/s390x,linux/ppc64le
-            image-name: gcr.io/kaniko-project/executor
+            platforms: linux/amd64                            #,linux/arm64,linux/s390x,linux/ppc64le
+            image-name: ghcr.io/ap0phi5/executor:latest       # gcr.io/kaniko-project/executor
             tag: ${{ github.sha }}
             release-tag: latest
 
